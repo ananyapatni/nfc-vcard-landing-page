@@ -7,7 +7,7 @@ The landing page is designed to serve as a digital business card that can be acc
 
 ## **Live Website**
 
-**[https://apsales.in](https://apsales.in)**
+**[https://apsales.in](https://apsales.in)** or **https://ananyapatni.github.io/apsales.in/**
 
 
 
