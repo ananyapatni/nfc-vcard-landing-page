@@ -69,23 +69,27 @@ h1, h2, h3 { margin-top: 0; font-weight: 600; }
 .btn-blue  { background: #0072BC; }
 
 /* Carousel */
-.carousel { overflow: hidden; border-radius: 18px; }
+.carousel {
+position: relative;
+overflow: hidden;
+border-radius: 18px;
+}
 .slides {
-    display: flex;
-    width: 300%;
-    animation: slide 12s infinite;
+display: flex;
+width: 300%;
+animation: slide 12s infinite;
+
 }
 .slides img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
+width: 100%;
+height: 240px;
+object-fit: cover;
 }
-
 @keyframes slide {
-    0% {transform: translateX(0%);}
-    33% {transform: translateX(-100%);}
-    66% {transform: translateX(-200%);}
-    100% {transform: translateX(0%);}
+0% {transform: translateX(0%);}
+33% {transform: translateX(-100%);}
+66% {transform: translateX(-200%);}
+100% {transform: translateX(0%);}
 }
 
 /* Grids */
@@ -179,7 +183,7 @@ footer { text-align: center; padding: 20px; color: #666; }
     <h2>Card Holder</h2>
 
     <div class="contact-info-line"><strong>Name:</strong> Mr. Hitesh Patni</div>
-    <div class="contact-info-line"><strong>Designation:</strong> Sales and Marketing Head</div>
+    <div class="contact-info-line"><strong>Designation:</strong> Sales and Marketing Engineer</div>
     <div class="contact-info-line"><strong>Mobile:</strong> +91 98491 48481</div>
     <div class="contact-info-line"><strong>Email:</strong> sales@apsales.in</div>
 
@@ -195,14 +199,6 @@ footer { text-align: center; padding: 20px; color: #666; }
     <a href="mailto:sales@apsales.in" class="btn btn-blue">✉ Email</a>
 </div>
 
-<!-- Catalog + VCF -->
-<div class="section" style="text-align:center;">
-    <h2>Download Catalouges</h2>
-    <a href="/assets/1.Introduction letter apsales fy 25 26.pdf" class="btn btn-green" download>📘 Company Profile</a>
-    <a href="aps-contact.vcf" class="btn btn-orange" download>💾 Gaskets Catalogue</a>
-    <a href="#" class="btn btn-blue">📹 Product Videos</a>
-</div>
-
 <!-- About -->
 <div class="section">
     <h2>About Us</h2>
@@ -212,6 +208,32 @@ footer { text-align: center; padding: 20px; color: #666; }
         we ensure reliability, traceability, and on-time delivery.
     </p>
 </div>
+
+<!-- Product Carousel -->
+<div class="section">
+    <h2>Our Products</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="/assets/valve pictures/api 600.png">
+            <img src="/assets/valve pictures/butterfly valve.png">
+            <img src="/assets/valve pictures/l&t-flanged-ball-valve.jpg">
+         </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="section">
+    <h2>What We Offer</h2>
+    <ul>
+        <li><strong>Industrial Valves:</strong> Gate, Globe, Check, Ball, Butterfly, and Strainers</li>
+        <li><strong>Gasket Manufacturing:</strong> Spiral Wound, RTJ, Metallic, PTFE, and Non-Asbestos</li>
+        <li><strong>High-Performance Gland Packing:</strong> Graphite, PTFE, and Aramid</li>
+        <li><strong>Custom-Engineered Sealing Solutions</strong></li>
+        <li><strong>Precision Components:</strong> Valve Spares and Fasteners</li>
+        <li><strong>Quality Compliance:</strong> Fully traceable materials meeting ASME, API, and ISO standards</li>
+    </ul>
+</div>
+
 <div class="section">
     <h2>Industries Served</h2>
 
@@ -222,55 +244,35 @@ footer { text-align: center; padding: 20px; color: #666; }
             Petrochemical
 
             <div class="popup-panel">
-                <img src="gate-valve.jpg">
-                <div class="popup-title">Gate Valve – API 600</div>
+                <img src="/assets/valve pictures/api 602.png">
+                <div class="popup-title">Gate Valve – API 602</div>
                 <div class="popup-desc">Designed for high-temperature hydrocarbon service. Offers tight shutoff and long cycle life in cracking, reforming, and hydrocarbon feed systems.</div>
-                <a href="gate-valve.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
+
                 <br> </br>
 
-                <img src="ball-valve.jpg">
-                <div class="popup-title">Fire-Safe Ball Valve</div>
-                <div class="popup-desc">Certified fire-safe valve ensuring secure isolation in flammable fluid lines. Suitable for tank farms, loading bays, and refinery header lines.</div>
-
-                <a href="ball-valve.pdf" class="btn btn-blue"  target="_blank">
-                    📄 Brochure
-                </a>
             </div>
+        
         </div>
 
         <!-- REFINERIES -->
         <div class="sector-box">
             Refineries
             <div class="popup-panel">
-                <img src="globe-valve.jpg">
-                <div class="popup-title">Globe Valve – Precise Flow Control</div>
+                <img src="/assets/valve pictures/gate valve.jpg">
+                <div class="popup-title">Gate Valves</div>
                 <div class="popup-desc">Widely used for throttling and control in refinery heater lines, steam circuits, and fractional distillation loops.</div>
-                <a href="globe-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
                 <br> </br>
-
-                <img src="plug-valve.jpg">
-                <div class="popup-title">Lubricated Plug Valve</div>
-                <div class="popup-desc">Suitable for heavy residue, slop oil, and viscous refinery streams. Low-torque operation with robust sealing.</div>
-
-                <a href="plug-valve.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
-            </div>
+                </div>
         </div>
 
         <!-- POWER PLANTS -->
         <div class="sector-box">
             Power Plants
             <div class="popup-panel">
-                <img src="check-valve.jpg">
-                <div class="popup-title">Swing Check Valve</div>
+                <img src="/assets/valve pictures/api 600.png">
+                <div class="popup-title">Forged Steel Ball Valve</div>
                 <div class="popup-desc">Protects critical assets by preventing reverse flow in high-pressure boiler feed lines and condensate return systems.</div>
-                <a href="check-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
                 <br> </br>
-
-                <img src="globe-hp-valve.jpg">
-                <div class="popup-title">High-Pressure Globe Valve</div>
-                <div class="popup-desc">Used in superheated steam lines, turbine auxiliaries, and high-temperature expansion loops.</div>
-
-                <a href="hp-globe-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
             </div>
         </div>
 
@@ -278,17 +280,12 @@ footer { text-align: center; padding: 20px; color: #666; }
         <div class="sector-box">
             Fertilizers
             <div class="popup-panel">
-                <img src="ptfe-lined-valve.jpg">
-                <div class="popup-title">PTFE-Lined Plug & Butterfly Valves</div>
-                <div class="popup-desc">Engineered for ammonia, urea, nitric acid, and corrosive media found in fertilizer production lines.</div>
-                <a href="ptfe-lined-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
+                <img src="/assets/valve pictures/l-t-globe-valve.jpg">
+                <div class="popup-title">Globe Valves</div>
+                <div class="popup-desc">Engineered for ammonia, urea, nitric acid, and miscellaenous corrosive media found in fertilizer production lines.</div>
                 <br> </br>
 
-                <img src="diaphragm-valve.jpg">
-                <div class="popup-title">Diaphragm Valve</div>
-                <div class="popup-desc">Ideal for slurry, molten urea, and crystallization loops requiring non-contaminating flow paths.</div>
-
-                <a href="diaphragm-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
+                
             </div>
         </div>
 
@@ -296,17 +293,10 @@ footer { text-align: center; padding: 20px; color: #666; }
         <div class="sector-box">
             Pharmaceutical
             <div class="popup-panel">
-                <img src="sanitary-valve.jpg">
-                <div class="popup-title">Sanitary SS316L Valves</div>
-                <div class="popup-desc">Hygienic valves for purified water (PW), WFI lines, and clean room processing—fully electropolished and contamination-free.</div>
-                <a href="sanitary-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
+                <img src="/assets/valve pictures/l&t-flanged-ball-valve.jpg">
+                <div class="popup-title">Ball Valves</div>
+                <div class="popup-desc">specialized ball valves ensure ultra-clean, leak-free fluid control while preventing bacterial growth to meet strict health and safety standards.</div>
                 <br> </br>
-
-                <img src="sample-valve.jpg">
-                <div class="popup-title">Zero Dead-Leg Sample Valve</div>
-                <div class="popup-desc">Used in aseptic sampling, ensuring sterile, microorganism-free product extraction.</div>
-
-                <a href="sample-valve.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
             </div>
         </div>
 
@@ -314,17 +304,10 @@ footer { text-align: center; padding: 20px; color: #666; }
         <div class="sector-box">
             Steel Plants
             <div class="popup-panel">
-                <img src="knife-gate-valve.jpg">
-                <div class="popup-title">Knife Gate Valve</div>
-                <div class="popup-desc">Designed for abrasive slurry, sinter dust, BF gas cleaning, and coke oven wastewater applications.</div>
-                <a href="knife-gate-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
+                <img src="/assets/valve pictures/tmbv.png">
+                <div class="popup-title">Trunnion Mounted Ball Valves</div>
+                <div class="popup-desc">TMBV valves provide durable, high-pressure control for heavy-duty gas and water lines, ensuring safe operation under intense heat and vibration.</div>
                 <br> </br>
-
-                <img src="metal-seated-ball.jpg">
-                <div class="popup-title">Metal Seated Ball Valve</div>
-                <div class="popup-desc">Operates in harsh, high-temperature, and particulate-heavy environments typical in steel mills.</div>
-
-                <a href="metal-seated-valve.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
             </div>
         </div>
 
@@ -332,17 +315,11 @@ footer { text-align: center; padding: 20px; color: #666; }
         <div class="sector-box">
             Water Treatment
             <div class="popup-panel">
-                <img src="butterfly-valve.jpg">
-                <div class="popup-title">Large-Diameter Butterfly Valves</div>
+                <img src="/assets/valve pictures/butterfly valve.png">
+                <div class="popup-title">Butterfly Valves</div>
                 <div class="popup-desc">Reliable for municipal distribution networks, filtration circuits, and raw water intake systems.</div>
-                <a href="butterfly-valve.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
                 <br> </br>
 
-                <img src="sluice-valve.jpg">
-                <div class="popup-title">Sluice & Control Valves</div>
-                <div class="popup-desc">Used for flow isolation in sewage, effluent, and desalination pumping stations.</div>
-
-                <a href="control-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
             </div>
         </div>
 
@@ -350,17 +327,10 @@ footer { text-align: center; padding: 20px; color: #666; }
         <div class="sector-box">
             OEMs & EPCs
             <div class="popup-panel">
-                <img src="special-valve.jpg">
-                <div class="popup-title">Custom-Engineered Valves</div>
+                <img src="/assets/valve pictures/tofbv2.png">
+                <div class="popup-title">Triple Offset Ball Valves</div>
                 <div class="popup-desc">Designed to suit OEM skid systems, compressor packages, boiler assemblies, and custom EPC project requirements.</div>
-                <a href="special-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
                 <br> </br>
-
-                <img src="project-valve.jpg">
-                <div class="popup-title">Project-Approved Valve Packages</div>
-                <div class="popup-desc">Compliant with global project standards (API, ASME, PED, ATEX) for integrated plant solutions.</div>
-
-                <a href="project-valves.pdf" class="btn btn-blue" target="_blank">📄 Brochure</a>
             </div>
         </div>
 
@@ -373,7 +343,7 @@ footer { text-align: center; padding: 20px; color: #666; }
 
 
 <!-- Clients -->
-<div class="section">
+<div class="section" style="text-align:center;">
     <h2>Our Clients</h2>
     <div class="logo-grid">
         <img src="/assets/client logos/amns india.jpg">
@@ -388,15 +358,18 @@ footer { text-align: center; padding: 20px; color: #666; }
 </div>
 
 <!-- Certifications -->
-<div class="section">
+<div class="section" style="text-align:center;">
     <h2>Certifications</h2>
     <div class="logo-grid">
         <img src="/assets/certifications/iso certified.png">
+        <img src="/assets/certifications/icv.png">
+        <img src="/assets/certifications/msme.png">
+        <img src="/assets/certifications/nsic.png">
     </div>
 </div>
 
 <!-- Office -->
-<div class="section">
+<div class="section" style="text-align:center;">
     <h2>Office Location</h2>
     <p>
         A.P. Sales & Services<br>
