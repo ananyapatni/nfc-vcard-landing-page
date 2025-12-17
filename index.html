@@ -68,28 +68,30 @@ h1, h2, h3 { margin-top: 0; font-weight: 600; }
 .btn-green { background: #39B54A; }
 .btn-blue  { background: #0072BC; }
 
-/* Carousel */
 .carousel {
-position: relative;
-overflow: hidden;
-border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff; /* Prevents flicker between slides */
+    height: 300px; 
 }
 .slides {
-display: flex;
-width: 300%;
-animation: slide 12s infinite;
-
+    display: flex;
+    width: 300%;
+    animation: slide-with-pause 12s infinite;
 }
 .slides img {
-width: 100%;
-height: 240px;
-object-fit: cover;
+    width: 33.333%; /* Ensures each image takes exactly 1/3 of the 300% width */
+    height: 300px;
+    object-fit: contain; /* Shows the whole valve without cropping */
+    background: #fff;
 }
-@keyframes slide {
-0% {transform: translateX(0%);}
-33% {transform: translateX(-100%);}
-66% {transform: translateX(-200%);}
-100% {transform: translateX(0%);}
+
+@keyframes slide-with-pause {
+    0%, 28% { transform: translateX(0%); } 
+    33%, 61% { transform: translateX(-33.333%); }
+    66%, 94% { transform: translateX(-66.666%); }
+    100% { transform: translateX(0%); }
 }
 
 /* Grids */
@@ -342,9 +344,7 @@ footer { text-align: center; padding: 20px; color: #666; }
     <h2>Our Clients</h2>
     <div class="logo-grid">
         <img src="assets/client logos/amns india.jpg">
-        <img src="assets/client logos/biocon.png">
         <img src="assets/client logos/divis.png">
-        <img src="assets/client logos/hp oil.png">
         <img src="assets/client logos/indian oil.png">
         <img src="assets/client logos/vizag steel plant.jpg">
         <img src="assets/client logos/drreddys.png">
@@ -371,6 +371,7 @@ footer { text-align: center; padding: 20px; color: #666; }
         #31-33-102/12, Shop-G9, Sri Vishnu Plaza<br>
         Opp. Leela Mahal Theatre, Dabagardens<br>
         Visakhapatnam – 530020<br>
+        <br> </br>
         <br> </br>
         Office number: +91 7205101817<br>
         Mr. G C Patni (proprietor): +91 9346348481 <br>
